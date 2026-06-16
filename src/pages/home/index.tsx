@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Social } from "../../components/Social";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
@@ -100,6 +101,10 @@ export function Home() {
           </a>
         </section>
         ))}
+
+        <Link to="/admin" className="bg-blue-600 text-white font-semibold rounded-lg py-3 px-4 mt-4 hover:bg-blue-700 transition-colors">
+          Ir para Admin
+        </Link>
 
         { socialLinks && Object.keys(socialLinks).length > 0 && (
           <footer className="flex justify-center gap-3 my-4">
